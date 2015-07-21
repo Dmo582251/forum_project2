@@ -35,35 +35,18 @@ module.exports.controller = function(app) {
 	});
 
 	//SHOW - specific topic
-	app.get('/topics/:id', function (req, res){
-		db.find('topics', req.params.id, function (topic){
-		// topics
-		var data = {
-			topic: topic[0]
-		};
-			db.findRelations('posts', 'topic_id', req.params.id, function (posts){
-				data.topic.posts = posts;
-				console.log("THESE ARE POSTS", posts);
-				
-				// data.topic.posts.forEach( function ( post, post_index, posts ){
-				// });
-
-				// for(var i = 0; i < posts.length; i++){
-				// 	db.find('users', posts[i-1].user_id , function (user){
-				// 		console.log("THIS IS THE USER SHIT", user);
-				// 		posts[i-1].user = user;
-				// 	});
-				// };
-
-				res.render('topicsShow', data);
-				
-				// var data = {
-    //       topic: topic[0],
-    //       posts: posts
-				// };
-				// console.log(req.session);
-				
-			});	
-		});
-	});
+    app.get('/topics/:id', function (req, res){
+        console.log(req.session)
+        var query = 'SELECT p.*, u.username, u.img_url FROM users u left join posts p ON u.id = p.user_id WHERE p.topic_id=' + req.params.id
+        db.find('topics', req.params.id, function (topic) {
+            db.query(query, function (posts) {
+                var data = {
+                    topic: topic[0],
+                    posts: posts
+                };
+                console.log(data)
+                res.render('topicsShow', data);
+            })
+        })
+    });
 }

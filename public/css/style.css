@@ -1,0 +1,152 @@
+body{
+	background-image: url("https://mastajappa.files.wordpress.com/2011/02/city_night-00000.jpg");
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face {
+    font-family: 'fff_tusjbold';
+    src: url('./FFF_Tusj-webfont.eot');
+    src: url('./FFF_Tusj-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./FFF_Tusj-webfont.woff') format('woff'),
+         url('./FFF_Tusj-webfont.ttf') format('truetype'),
+         url('./FFF_Tusj-webfont.svg#fff_tusjbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+h1{
+	font-family: 'Josefin Slab', serif;
+	color: #2f3138;
+}
+
+a:hover{
+	color:white;
+}
+
+/*LOGIN PAGE
+--------------------------*/
+.signout{
+	text-align: right;
+	margin: auto;
+	padding: 20px;
+	font-size: 30px;
+	position: relative;
+	font-family: 'Josefin Slab', serif;
+  text-shadow:
+  -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+}
+
+
+.navigation{
+  background-color:rgba(223, 132, 96, 0.5);
+  text-align: center;
+  margin: auto;
+  font-size: 43px;
+  width: 20%;
+  padding: 40px;
+  position: fixed;
+  text-decoration: none;
+  font-family: 'Josefin Slab', serif;
+
+  border-right: 6px;
+  border-style: solid;
+}
+
+.signIn{
+	background-color: rgba(256, 242, 194, 0.7);
+  height: 675px;
+  position: fixed;
+  padding: 75px;
+  border-color: #2f3138;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 10px;
+  margin: auto;
+  margin-left: 235px;
+  margin-bottom: 300px;
+}
+
+#text {
+ position: relative;
+ width: 223px;
+ height: 75px;
+}
+
+.signup{
+	width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 0px;
+  position: relative;
+  top: 0px;
+
+}
+
+
+.signIn input, textarea{
+  text-align: center;
+	margin: 5px 5px 5px 5px;
+  font-family:'Josefin Slab', serif;
+  font-size: 20px;
+}
+
+.signin{
+	width: 500px;
+  height: 200px;
+  border-radius: 5px;
+  text-align: center;
+  margin: auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  position: relative;
+}
+.signIn h1{
+	font-size: 40px;
+}
+
+.login{
+  font-family: 'Josefin Slab', serif;
+  font-size: 23px;
+}
+
+/*AFTERLOG
+--------------------------*/
+.afterlog{
+  height: 375px;
+  width: 600px;
+  padding: 30px;
+  background-color:rgba(251, 249, 194, 0.7);
+  margin: auto;
+  position: relative;
+  right: 50px;
+  top: 70px;
+
+}
+
+.afterlog h2, h1{
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
+  font-size:38px; 
+}
+
+.afterlog h1{
+  font-size:50px; 
+  padding: 15px;
+}
+
+.afterlog h2{
+  padding: 0px;
+}
+
+
+/* TOPICS INDEX
+------------------------------*/
+
+

@@ -1,7 +1,8 @@
 /* Set Up
 -------------*/
 var pg = require('pg'); //grabs postgres
-var dbUrl = "pg://localhost/forum_db"; // connecting to database
+//var dbUrl = "pg://localhost/forum_db"; // connecting to database
+var dbUrl = process.env.DATABASE_URL
 
 //this is just working with pg model
 //prepared our functions to do whatever we want and to do them to many different things
@@ -114,4 +115,14 @@ module.exports = {
    })
    this.end();
  },
+ query: function (string, cb) {
+   pg.connect(dbUrl, function (err, client, done) {
+       client.query(string, function (err, result) {
+           done();
+               console.log("INSIDE DB QUERY 2")
+              console.log(result)
+           cb(result.rows)
+       });
+   });
+ 	}
 };

@@ -1,0 +1,19 @@
+  <h1> Welcome to the Topics Page</h1>
+
+{{#each topics}}
+	<div class="single box">
+		<h3>
+			<a href="/topics/{{id}}">{{title}}</a>
+		</h3>
+
+		<a href="/topics/{{id}}">
+			<img src="{{img_url}}" alt="" height="400" width="400">
+		</a>
+
+	</div>
+{{/each}}
+
+
+	<a href="/topics/new">
+		add a new topic
+	</a>

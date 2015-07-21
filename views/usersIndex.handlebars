@@ -1,0 +1,15 @@
+<h1> Welcome to the Users Page</h1>
+
+{{#each users}}
+	<div class="single box">
+		<h3>
+			<a href="/users/{{id}}">{{name}}</a>
+		</h3>
+
+		<a href="/users/{{id}}">
+			<img src="{{img_url}}" alt="" height="400" width="400">
+		</a>
+
+	</div>
+{{/each}}
+

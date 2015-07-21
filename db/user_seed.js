@@ -31,13 +31,13 @@ var lucy = {
 // DB STUFF
 //cosmo 
 db.create('users', cosmo, function (user){
-	post1.user_id = user.id
+	post1.user_id = user.id;
 	console.log("cosmo worked");
 })
 
 
 //lucy
 db.create('users', lucy, function (user){
-	post2.user_id = user.id
+	post2.user_id = user.id;
 		console.log("lucy worked");
 });

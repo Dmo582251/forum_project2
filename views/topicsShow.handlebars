@@ -1,0 +1,26 @@
+<div class="single box">
+  <h3>
+    {{topic.title}}
+  </h3>
+
+  <a href="/topics/{{topic.id}}">
+    <img src="{{topic.img_url}}" width="400" height="400">
+  </a>
+
+  <br>
+  
+  {{#each posts}}
+    <p>{{description}}</p>
+    <p>{{location}}</p>
+    <p>{{date_made}}</p>
+    <a href="/users/{{user_id}}">User Page</a>
+  {{/each}}
+
+  
+
+  <a href="/posts/{{topic.id}}/new/">
+    add a post
+  </a>
+
+  <br>
+</div>

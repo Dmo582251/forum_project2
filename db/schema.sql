@@ -8,7 +8,7 @@ CREATE TABLE users(
 	name VARCHAR(255),
 	img_url TEXT,
 	bio TEXT,
-	date_made TIMESTAMP
+	date_made DATE NOT NULL default CURRENT_DATE
 );
 
 CREATE TABLE topics(
@@ -21,7 +21,7 @@ CREATE TABLE posts(
 	id SERIAL PRIMARY KEY,
 	description TEXT,
 	location TEXT,
-	date_made TIMESTAMP,
+	date_made DATE NOT NULL default CURRENT_DATE,
 	like_count INTEGER,
 	user_id INTEGER references users,
 	topic_id INTEGER references topics

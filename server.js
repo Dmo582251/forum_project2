@@ -11,6 +11,7 @@ var fs 						 = require('fs');
 var session 			 = require('express-session');
 var cookieParser	 = require('cookie-parser'); // the session is stored in a cookie, so we use this to parse it
 
+
 var app = express();
 
 // Setting up handlebars
@@ -20,7 +21,11 @@ app.set('view engine', 'handlebars');
 
 // must use cookieParser before expressSession
 app.use(cookieParser());
-app.use(session({ secret: 'app', cookie: { maxAge: 60000 }}));
+app.use(session({
+  secret: 'thisisitotallysecret',
+  saveUninitialized: false,
+  resave: false
+}));
 
 
 // Allows us to use req.body
@@ -49,26 +54,34 @@ app.use(methodOverride(function (req, res) {
 app.listen(3000);
 
 
-/*START ROUTES
----------------------------*/
-//HOME ROUTE
+
+
+/////////////////////////////////////////////
+///////////* Start Routes *//////////////////
+
+//HOME ROUTE (login route)
 app.get('/', function (req, res) {
+	console.log(req.session);
   res.render('home');
 });
 
-//USER LOGIN
+
+/* Login Stuff 
+--------------------------*/
+
+//users logging in
 app.post('/login', function(req, res){
-	//created ne findbyColumn for this
+	//created findbyColumn for this
 	db.findByColumn('users', 'username', req.body.username, function (data){
 		//how you sign in 
 		req.session.signed_in_user_id = data[0].id;
 		req.session.loggedIn = true;
-		res.send(data);
+		//res.send(data);
+		res.render('afterlog');
 	}); 
 });
 
-//CREATING USER POST
-
+//creating users (post)
 app.post('/signup', function (req, res) {
 	console.log(req.body);
 	db.create('users', req.body, function (data) {
@@ -87,9 +100,20 @@ app.get('/test', function (req, res) {
   res.render('test');
 });
 
-//SIGNING OUT OF USER
+//signing out of user
 app.get('/signout', function (req, res){
-	req.session.destroy();
+	req.session.signed_in_user_id = null;
+	req.session.loggedIn = null;
 	res.redirect('/');
 });
+
+/*Home Page Button
+---------------------*/
+app.get('/homePage', function (req, res){
+	res.render('homePage');
+});
+
+
+
+
 

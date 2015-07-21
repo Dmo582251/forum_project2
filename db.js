@@ -21,9 +21,12 @@ module.exports = {
 	},
 	find: function(table, id, cb) {
 		pg.connect(dbUrl, function (err, client, done){
-			client.query('SELECT * FROM ' + table + ' WHERE id=' + id, function (err, result){
+			var q = 'SELECT * FROM ' + table + ' WHERE id=' + id;
+			console.log(q);
+			client.query(q, function (err, result){
+				if (err) {return console.error('error from find', err)};
 				done();
-
+				// console.log(result.rows);
 				cb(result.rows);
 			});
 		});
@@ -33,7 +36,7 @@ module.exports = {
 		pg.connect(dbUrl, function (err, client, done){
 			client.query('SELECT * FROM ' + table + ' WHERE ' + col + '=\'' + value + '\'', function (err, result){
 				done();
-				console.log('SELECT * FROM ' + table + ' WHERE ' + col + '=\'' + value + '\'')
+				// console.log('SELECT * FROM ' + table + ' WHERE ' + col + '=\'' + value + '\'')
 				cb(result.rows);
 			});
 		});
@@ -98,5 +101,17 @@ module.exports = {
 			});
 		});
 		this.end();
-	}
+	},
+	findUserName: function (columns, table, table2, column1, cb){
+   pg.connect(dbUrl, function (err, client, done){
+     var query = 'SELECT '+columns+' FROM ' + table + ' FULL OUTER JOIN ' + table2 + ' ON ' + table+'.'+column1 + '=' + table2+'.id';
+     console.log(query)
+     client.query(query, function (err, result){
+       console.log("THIS IS RESULT", result);
+       cb(result.rows)
+     })
+
+   })
+   this.end();
+ },
 };

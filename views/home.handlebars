@@ -1,16 +1,25 @@
-<h1>SIGN IN</h1>
-<form action="/login" method="POST">
-				<input type="text" name="username" placeholder="username">
-				<div class = "login"><input type="submit" class="login" value="login" class="login"></div>
-</form>
+<div class="signIn">
+	<div class="signin">
+		<h1>SIGN IN</h1>
+		<form action="/login" method="POST">
+						<input type="text" name="username" placeholder="username">
+						<div class = "login"><input type="submit" class="login" value="login" class="login"></div>
+		</form>
+	</div>
 
-<h1>SIGN UP</h1>
-<form action="/signup" method="POST">
-				<input type="text" name="username" placeholder="username">
-				<input type="text" name="name" placeholder="full name">
-				<input type="text" name="img_url" placeholder="img">
-				<input type="text" name="bio" placeholder="tell us about yourself">
-	
-				<div class="login"><input type="submit" value="login" class="login"></div>
-</form>
+	<div class="signup">
+		<h1>SIGN UP</h1>
+		<form action="/signup" method="POST">
+						<input type="text" name="username" placeholder="username">
+						<br>
+						<input type="text" name="name" placeholder="full name">
+						<br>
+						<input type="text" name="img_url" placeholder="img">
+						<br>
+						<textarea id="text" type="text" name="text" placeholder="Tell us about yourself"></textarea><br>
+						<br>
+						<div class="login"><input type="submit" value="login" class="login"></div>
+		</form>
+	</div>
+</div>
 

@@ -18,6 +18,7 @@
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     <!--My Style Sheet-->
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="style.css">
   
   </head>
@@ -27,7 +28,7 @@
     <div class="row">
         <div class="col-md-3">
       <div class="navigation">
-          <a href="/homePage" style="color:#2f3138";><i class="fa fa-home"></i><br>Home</a>
+          <a href="/homePage" style="color:#2f3138"><i class="fa fa-home"></i><br>Home</a>
           <br>
           <br>
           <a href="/topics" style="color:#2f3138"><i class="fa fa-comments"></i><br>Topics</a>
@@ -36,14 +37,15 @@
           <a href="/users" style="color:#2f3138"><i class="fa fa-users"></i><br>Users</a>
           <br>
           <br>
-          <a href="/popularTopics" style="color:#2f3138"><i class="fa fa-star-o"></i><br>Popular Topics</a>
+          <a href="/popularTopics" style="color:#2f3138"><i class="fa fa-star"></i><br>Popular</a>
           <br>
           <br>
         </div>
       </div>
          <div class="col-md-9">
           <div claas ="body">
-          <a href="/signout">Sign Out</a>
+          
+          <div class="signout"><a href="/signout">Sign Out</a></div>
           
             {{{body}}}
           </div>

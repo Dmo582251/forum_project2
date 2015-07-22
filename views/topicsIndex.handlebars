@@ -1,19 +1,20 @@
-  <h1> Welcome to the Topics Page</h1>
+ <h1 class="Topich1">Chose or Create a Topic</h1></div>
 
 {{#each topics}}
-	<div class="single box">
+	<div class ="single box">
 		<h3>
 			<a href="/topics/{{id}}">{{title}}</a>
 		</h3>
 
 		<a href="/topics/{{id}}">
-			<img src="{{img_url}}" alt="" height="300" width="300">
+			<img src="{{img_url}}" alt="" height="200" width="200">
 		</a>
 
 	</div>
 {{/each}}
 
-
-	<a href="/topics/new">
-		add a new topic
-	</a>
+<div class="newTopic box">
+		<a href="/topics/new">
+			add a new topic
+		</a>
+</div>

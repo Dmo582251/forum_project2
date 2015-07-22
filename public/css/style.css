@@ -63,10 +63,6 @@ a:hover{
   height: 675px;
   position: fixed;
   padding: 75px;
-  border-color: #2f3138;
-  border-width: 4px;
-  border-style: solid;
-  border-radius: 10px;
   margin: auto;
   margin-left: 235px;
   margin-bottom: 300px;
@@ -81,7 +77,6 @@ a:hover{
 .signup{
 	width: 500px;
   height: 200px;
-  border-radius: 5px;
   text-align: center;
   margin-top: 0px;
   position: relative;
@@ -100,7 +95,6 @@ a:hover{
 .signin{
 	width: 500px;
   height: 200px;
-  border-radius: 5px;
   text-align: center;
   margin: auto;
   margin-bottom: 0px;
@@ -148,5 +142,203 @@ a:hover{
 
 /* TOPICS INDEX
 ------------------------------*/
+.single {
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  float: left;
+  text-align: center;
+  margin: 25px;
+}
 
+.box {
+  background: rgba(251, 249, 194, 0.7);
+}
+
+.Topich1{
+  font-size: 50px;
+  text-align: center;
+}
+
+
+
+.newTopic{
+  width: 300px;
+  height: 300px;
+  border-radius: 5px;
+  float: left;
+  text-align: center;
+  margin: 15px;
+  border-style: dashed;
+  color: black;
+  border-width: 10px;
+  padding-top: 110px;
+}
+
+.newTopic a{
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+  font-size: 35px;
+  padding: 30px;
+  position: relative;
+  color: black;
+}
+
+
+.single h3{
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+
+}
+
+.single a{
+  color:black;
+}
+
+
+/*SINGLE TOPIC
+--------------------------*/
+.topicTitle{
+  height: 150px;
+  width: 700px;
+  padding: 15px;
+  padding-top: 0px;
+  text-align: center;
+}
+
+.t-title{
+  color:white;
+  text-align: center;
+  font-size: 70px;
+  font-family:'Josefin Slab', serif;
+}
+
+.postsTopic{
+  background-color: rgba(251, 249, 194, 0.7);
+  padding: 2%;
+  margin: auto;
+  height: 300px;
+  width: 800px;
+  display: block;
+}
+
+.postsTopic p{
+  font-family: 'Josefin Slab', serif;
+  color: #2f3138;
+}
+.username{
+  font-size: 25px;
+  display: block;
+  color: #2f3138;
+  font-family: 'Josefin Slab', serif;
+}
+
+.textInPost{
+  display: block;
+  float: right;
+  font-size: 20px;
+}
+
+.description{
+  text-align: center;
+  margin-right: 200px;
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.addPost{
+  font-size: 50px;
+  font-family: 'Josefin Slab', serif;
+  margin: auto;
+  color:rgba(223, 132, 96, 0.9);
+  margin-left: 500px;
+  padding-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* NEW TOPIC FORM
+------------------------------*/
+
+.new-topic-form{
+  background-color: rgba(256, 242, 194, 0.7);
+  height: 200px;
+  position: fixed;
+  padding: 75px;
+  margin-left: 235px;
+  margin-bottom: 300px;
+}
+
+.new-topic-h1{
+  text-align: center;
+  margin-right: 10%;
+
+}
+.new-topic-form input{
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+  font-family:'Josefin Slab', serif;
+  font-size: 20px;
+}
+
+/* NEW POST FORM
+------------------------------*/
+.new-post-form{
+  background-color: rgba(256, 242, 194, 0.7);
+  height: 200px;
+  width: 600px;
+  padding: 75px;
+  margin-left: 235px;
+  margin-bottom: 300px;
+  text-align: center;
+}
+
+.new-post-h1{
+  text-align: center;
+  margin-right: 10%;
+
+}
+.new-post-form input{
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+  font-family:'Josefin Slab', serif;
+  font-size: 20px;
+}
+
+/* USER SHOW
+------------------------------*/
+.post{
+  background: rgba(251, 249, 194, 0.7);
+  font-size: 26px;
+  text-align: center;
+  font-family: 'Josefin Slab', serif;
+  width: 1175px;
+  margin:30px;
+}
+
+.all-user-post{
+  font-size: 50px;
+  color:rgba(223, 132, 96, 0.9);;
+
+}
+
+.profile{
+  background: rgba(223, 132, 96, 0.8);
+  font-family: 'Josefin Slab', serif;
+  font-size: 30px;
+  width: 1175px;
+}
+
+.bio{
+  word-wrap: break-word;
+  padding: 15px;
+  float: right;
+  margin-top:-400px;
+  margin-right:215px;
+}
+
+.upper-bio{
+  padding: 15px;
+  padding-left: 30px;
+}
 

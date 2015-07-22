@@ -1,27 +1,36 @@
-    <h3>
-    {{users.name}}
-  </h3>
-
-
-    <img src="{{users.img_url}}" width="400" height="400">
-  </a>
-
-  <br>
-  <div class="bio">
-    <p>{{users.date_made}}</p>
-    <p>{{users.name}}
-    <p>{{users.username}}</p>
-    <p>{{users.bio}}</p>
-  </div>
-
-  <br>
+<h1 class="Topich1">User</h1></div>
   
+  <div class = "profile">
+    <div class="upper-bio">
+    <h3>
+      {{users.name}}
+    </h3>
+
+
+      <img src="{{users.img_url}}" width="300" height="300">
+    </a>
+    </div>
+    <br>
+    <div class="bio">
+      <p><b>Name:<b><br>{{users.name}}
+      <p><b>Username:<b><br>{{users.username}}</p>
+      <p><b>User Bio:<b><br>{{users.bio}}</p>
+      <p><b>Date User was Created:<b><br>{{users.date_made}}</p>
+    </div>
+</div>
+
+  <br>
+
+
+  
+  <h1 class="all-user-post"><b>All User Posts<b></h1>
+  <br>
   {{#each posts}}
     <div class="post">
+      <a href="/topics/{{topic_id}}">Go to the Topic</a>
       <p>{{description}}</p>
       <p>{{location}}</p>
       <p>{{date_made}}</p>
       <p>{{like_count}}</p>
-      <a href="/topics/{{topic_id}}">Topic of post</a>
     </div>
   {{/each}}

@@ -7,6 +7,7 @@ var photo = [
 'http://www.vvcofhamburg.com/wp-content/uploads/2015/07/little_cute_cat_1920x1080.jpg',
 'http://cdn.sheknows.com/articles/2013/04/Puppy_2.jpg'
 ];
+
 //this is for posts
 var description = ['This is my topic 1 post', 'This is my topic 2 post'];
 var like_count = [5, 3];
